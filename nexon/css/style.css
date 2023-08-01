@@ -1,0 +1,53 @@
+/*
+    css 신기술
+    https://velog.io/@blackeichi/CSS-%EC%B5%9C%EC%8B%A0-%EA%B8%B0%EC%88%A0
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+[hidden] {
+    display: none;
+}
+
+[center] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    background-color: white;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 63px;
+    background-color: inherit;
+    border-bottom: 1px solid #dde1e5;
+    font: 12px malgun gothic,"sans serif";
+
+    .header__menu {
+        width: 107px;
+        height: inherit;
+        padding-left: 23px;
+    }
+
+    .header__nav {
+        height: inherit;
+        padding-right: 28px;
+
+        .hedaer__card {
+            
+        }
+    }
+}
+
+.banner__div {
+    height: 560px;
+}
