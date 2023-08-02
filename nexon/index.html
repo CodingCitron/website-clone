@@ -20,6 +20,7 @@
         >
             <a 
                 href="#"
+                class="side-nav__button--navi-open"
                 center
             >
                 <div class="hambuger">
@@ -60,6 +61,140 @@
             </a>
         </nav>
     </header>
+    <div 
+        class="backdrop"
+    >
+    </div>
+    <aside 
+        class="side-nav"
+    >
+        <header class="side-nav__header">
+            <a class="close-btn">
+                <div>
+                    <span></span>
+                    <span></span>
+                </div>
+            </a>
+        </header>
+        <div class="side-nav__content">
+            <div class="side-nav__tab">
+                <ul class="side-nav__list">
+                    <li class="side-nav__item">
+                        <a class="all-game__button">
+                            전체게임
+                        </a>
+                    </li>
+                    <li>
+                        <a class="custom-service__button">
+                            고객센터
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="game-list">
+                <ul class="game-list__cell">
+                    <li>
+                        <h3>A~Z</h3>
+                        <a>FIFA 모바일</a>
+                        <a>FIFA 온라인 4</a>
+                        <a>THE FINALS</a>
+                        <a>V4</a>
+                    </li>
+                    <li>
+                        <h3>ㄱ~ㄹ</h3>
+                        <a>고질라 디펜스 포스</a>
+                        <a>그랜드체이스 클래식</a>
+                        <a>나이트 워커</a>
+                        <a>넥슨타운: NEXONTOWN</a>
+                        <a>던전앤파이터</a>
+                        <a>던전앤파이터 듀얼</a>
+                        <a>던전앤파이터 모바일</a>
+                        <a>데이브 더 다이버</a>
+                        <a>드래곤네스트</a>
+                    </li>
+                    <li>
+                        <h3>ㅁ~ㅅ</h3>
+                        <a>마비노기</a>
+                        <a>마비노기 영웅전</a>
+                        <a>메이플스토리</a>
+                        <a>메이플스토리 월드</a>
+                        <a>메이플스토리2</a>
+                        <a>메이플스토리M</a>
+                        <a>바람의나라</a>
+                        <a>바람의나라: 연</a>
+                        <a>버블파이터</a>
+                        <a>베일드 엑스퍼트</a>
+                        <a>블루 아카이브</a>
+                        <a>사이퍼즈</a>
+                        <a>서든어택</a>
+                    </li>
+                </ul>
+                <ul class="game-list__cell">
+                    <li>
+                        <h3>ㅇ~ㅈ</h3>
+                        <a>아스가르드</a>
+                        <a>아키에이지</a>
+                        <a>어둠의전설</a>
+                        <a>엘소드</a>
+                        <a>워헤이븐</a>
+                        <a>일랜시아</a>
+                    </li>
+                    <li>
+                        <h3>ㅊ~ㅋ</h3>
+                        <a>카운터-스트라이크 온라인</a>
+                        <a>카트라이더 러쉬플러스</a>
+                        <a>카트라이더: 드리프트</a>
+                        <a>크레이지 아케이드</a>
+                        <a>클로저스</a>
+                    </li>
+                    <li>
+                        <h3>ㅌ~ㅎ</h3>
+                        <a>테일즈런터</a>
+                        <a>테일즈위버</a>
+                        <a>파이널판타지14</a>
+                        <a>퍼스트 디센던트</a>
+                        <a>프라시아 전기</a>
+                        <a>프리스타일2</a>
+                        <a>히트2</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <footer class="side-nav__footer">
+            <ul>
+                <li>
+                    <a>내정보</a>
+                </li>
+                <li>
+                    <a>이벤트</a>
+                </li>
+                <li>
+                    <a>넥슨캐시</a>
+                </li>
+                <li>
+                    <a>보안센터</a>
+                </li>
+                <li>
+                    <a>공지사항</a>
+                </li>
+                <li>
+                    <a>넥슨플러그</a>
+                </li>
+                <li>
+                    <a>고객센터</a>
+                </li>
+                <li>
+                    <a>넥슨현대카드</a>
+                </li>
+                <li>
+                    <a>넥슨플레이</a>
+                </li>
+            </ul>
+            <a>
+                전체서비스
+            </a>
+        </footer>
+    </aside>
     <div class="banner__div">
         <!-- Slider main container -->
         <div class="swiper">
@@ -74,13 +209,31 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
+            <!-- If we need scrollbar
+            <div class="swiper-scrollbar"></div> -->
         </div>
     </div>
+    <div class="contents">
+        <div>
+            <h2>추천게임</h2>
+            <div class="contents__inner">
+                <div class="contents__item">
+                    <h3>
+                        #최근 플레이어 수 급증한
+                    </h3>
+                    <ul class="swiper">
+                        
+                    </ul>
+                </div>
+                <div class="contents__item">
 
-    <footer></footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer"></footer>
+    <script src="./js/cdnjs.cloudflare.com_ajax_libs_Swiper_10.1.0_swiper-bundle.min.js"></script>
+    <script src="./js/data.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

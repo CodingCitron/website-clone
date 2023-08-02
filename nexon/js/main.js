@@ -1,30 +1,45 @@
-
 const bannerSlide = document.querySelector('.banner__div .swiper')
-const slideImgs = 'qwam04142644720.jpg,mmPD26190400925.jpg,OgwX26132656493.png,zGLe19201342335.jpg,IFIh24201003979.png,9wMF27110625159.png,Mojq27144929137.png,a2Ca31133604697.jpg'.split(',')
 
 const slideWrap =  bannerSlide.querySelector('.swiper-wrapper')
-slideWrap.style.height = `560px`
+const SlideKeys = Object.keys(slideImages)
 
-slideImgs.forEach(img => {
+SlideKeys.forEach(key => {
+  const { name, backgroundColor } = slideImages[key]
+
   const div = document.createElement('div')
-  div.className = 'swiper-slide'
-  div.style.height = '100%'
-  div.style.backgroundImage = `url('./imgs/${img}')`
-  div.style.backgroundRepeat = 'no-repeat'
-  div.style.backgroundPosition = 'top'
-  div.style.backgroundSize = 'auto 100%'
-  div.style.backgroundAttachment = 'contain'
+  const a = document.createElement('a')
 
+  div.className = 'swiper-slide'
+  a.style.display = 'block'
+  a.style.backgroundColor = backgroundColor
+  a.style.backgroundImage = `url('./imgs/${name}')`
+  a.style.backgroundRepeat = 'no-repeat'
+  a.style.backgroundPosition = 'top'
+  a.style.backgroundSize = 'auto 100%'
+  
+  div.append(a)
   slideWrap.append(div)
 })
 
-const bannnerSwiper = new Swiper('.swiper', {
+const bannnerSwiper = new Swiper(bannerSlide, {
     // Optional parameters
     loop: true,
-  
+    effect: "fade",
+    allowTouchMove: false,
+    autoHeight: true,
+    preventClicks: false,
+    preloadImages: false,
+    lazy: true,
+    fadeEffect: {
+      crossFade: true
+    },
+    autoplay: {
+      delay: 5e3
+    },
     // If we need pagination
     pagination: {
       el: '.swiper-pagination',
+      clickable: true,
     },
   
     // Navigation arrows
@@ -32,12 +47,87 @@ const bannnerSwiper = new Swiper('.swiper', {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-  
+    
+    resizeObserver: true
     // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
+    // scrollbar: {
+    //   el: '.swiper-scrollbar',
+    // },
 })
+
+const sideNavOpenBtn = document.querySelector('.side-nav__button--navi-open')
+const sideNav = document.querySelector('.side-nav')
+const sideNavCloseBtn = sideNav.querySelector('.close-btn')
+const backdrop = document.querySelector('.backdrop')
+
+function sideNavOpen () {
+  sideNav.classList.add('open')
+  backdrop.classList.add('open')
+  document.documentElement.style.overflow = 'hidden'
+}
+
+function sideNavClose () {
+  sideNav.classList.remove('open')
+  backdrop.classList.remove('open')
+  document.documentElement.style.overflow = 'initial'
+}
+
+sideNavOpenBtn.addEventListener('click', sideNavOpen)
+sideNavCloseBtn.addEventListener('click', sideNavClose)
+backdrop.addEventListener('click', sideNavClose)
+
+// const dict = {
+//   'A~Z': {
+//     start: 'A',
+//     end: 'Z',
+//     list: []
+//   },
+//   'ㄱ~ㄹ': {
+//     start: 'ㄱ',
+//     end: 'ㄹ',
+//     list: []
+//   },
+//   'ㅁ~ㅅ': {
+//     start: 'ㅁ',
+//     end: 'ㅅ',
+//     list: []
+//   },
+//   'ㅇ~ㅈ': {
+//     start: 'ㅇ',
+//     end: 'ㅈ',
+//     list: []
+//   },
+//   'ㅊ~ㅋ': {
+//     start: 'ㅊ',
+//     end: 'ㅋ',
+//     list: []
+//   },
+//   'ㅌ~ㅎ': {
+//     start: 'ㅌ',
+//     end: 'ㅎ',
+//     list: []
+//   }
+// }
+
+// console.log(`ㄱ`.charCodeAt())
+
+// games.forEach(string => {
+
+//   const keys = Object.keys(dict)
+
+//   for(let i = 0; i < keys.length; i++) {
+//     const { start, end } = dict[keys[i]]
+//     const reg = new RegExp(`[${start}-${end}]`)
+    
+//     console.log(string[0].charCodeAt())
+//     if(reg.test(string[0])) {
+//       dict[keys[i]].list.push(string)
+//       break
+//     }
+//   }
+// })
+
+// console.log(dict)
 
 window.onresize = function (e) {
   
