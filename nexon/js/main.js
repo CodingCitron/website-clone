@@ -129,6 +129,78 @@ backdrop.addEventListener('click', sideNavClose)
 
 // console.log(dict)
 
+const recommendSwiper = document.querySelector('.recommend .swiper')
+const recommendSwiperWrap = recommendSwiper.querySelector('.swiper-wrapper') 
+const recommendLeftBtn = document.getElementById('recommend-left')
+const recommendRightBtn = document.getElementById('recommend-right')
+
+contentsSlideImages.forEach(info => {
+  const li = document.createElement('li')
+  const a = document.createElement('a')
+  const topDiv = document.createElement('div') 
+  const bottomDiv = document.createElement('div')
+  const pick = document.createElement('div')
+  const title = document.createElement('div')
+
+  const img = document.createElement('img')
+  img.src = `./imgs/contents-slide/${info.imageName}`
+  a.className = 'slide-content'
+  img.className = 'game-img'
+
+  topDiv.style.height = '192px'
+  topDiv.style.overflow = 'hidden'
+  
+  bottomDiv.append(pick)
+  bottomDiv.append(title)
+  console.log(info)
+
+  pick.className = 'recommend-item'
+  pick.textContent = '추천'
+
+  if(info.pick) {
+    pick.className = 'recommend-item pick'
+    pick.textContent = 'Pick'
+  }
+
+  title.textContent = info.name
+  title.className = 'recommend-item-title'
+
+  topDiv.append(img)
+  a.append(topDiv)
+  a.append(bottomDiv)
+
+  li.className = 'swiper-slide'
+
+  li.append(a)
+  recommendSwiperWrap.append(li)
+})
+
+const recommendGamesSlide = new Swiper(recommendSwiper, {
+  slidesPerView: 4,
+  // Optional parameters
+  allowTouchMove: false,
+  autoHeight: true,
+  preventClicks: false,
+  preloadImages: false,
+  lazy: true,
+  fadeEffect: {
+    crossFade: true
+  },
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: recommendLeftBtn,
+    prevEl: recommendRightBtn
+  },
+  
+  resizeObserver: true
+})
+
 window.onresize = function (e) {
   
 }

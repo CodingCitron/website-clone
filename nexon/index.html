@@ -10,10 +10,10 @@
         href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/icon.css" />
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
-    <!-- BEM (Block-Element-Modifier) -->
     <header class="header">
         <div 
             class="header__menu base-hover" 
@@ -163,34 +163,52 @@
         <footer class="side-nav__footer">
             <ul>
                 <li>
-                    <a>내정보</a>
+                    <a>
+                        <span class="icon icon-1"></span>내정보
+                    </a>
                 </li>
                 <li>
-                    <a>이벤트</a>
+                    <a>
+                        <span class="icon icon-2"></span>이벤트
+                    </a>
                 </li>
                 <li>
-                    <a>넥슨캐시</a>
+                    <a>
+                        <span class="icon icon-3"></span>넥슨캐시
+                    </a>
                 </li>
                 <li>
-                    <a>보안센터</a>
+                    <a>
+                        <span class="icon icon-4"></span>보안센터
+                    </a>
                 </li>
                 <li>
-                    <a>공지사항</a>
+                    <a>
+                        <span class="icon icon-5"></span>공지사항
+                    </a>
                 </li>
                 <li>
-                    <a>넥슨플러그</a>
+                    <a>
+                        <span class="icon icon-9"></span>넥슨플러그
+                    </a>
                 </li>
                 <li>
-                    <a>고객센터</a>
+                    <a>
+                        <span class="icon icon-7"></span>고객센터
+                    </a>
                 </li>
                 <li>
-                    <a>넥슨현대카드</a>
+                    <a>
+                        <span class="icon icon-8"></span>넥슨현대카드
+                    </a>
                 </li>
                 <li>
-                    <a>넥슨플레이</a>
+                    <a>
+                        <span class="icon icon-6"></span>넥슨플레이
+                    </a>
                 </li>
             </ul>
-            <a>
+            <a class="allService">
                 전체서비스
             </a>
         </footer>
@@ -214,24 +232,214 @@
         </div>
     </div>
     <div class="contents">
-        <div>
+        <div class="recommend">
             <h2>추천게임</h2>
             <div class="contents__inner">
                 <div class="contents__item">
-                    <h3>
-                        #최근 플레이어 수 급증한
-                    </h3>
-                    <ul class="swiper">
-                        
-                    </ul>
+                    <div class="contents__item--sub-title">
+                        <h3>
+                            #최근 플레이어 수 급증한
+                        </h3>
+                        <div>
+                            <button id="recommend-left">
+                                left
+                            </button>
+                            <button id="recommend-right">
+                                right
+                            </button>
+                        </div>
+                    </div>
+                    <div class="swiper">
+                        <li class="swiper-wrapper">
+                            
+                        </ul>
+                    </div>
                 </div>
                 <div class="contents__item">
-
+                    <div class="contents__item--sub-title-right">
+                        <div>
+                            <button>고객센터</button>
+                            <button>보안센터</button>
+                        </div>
+                    </div>
+                    <div class="contents__item--auth">
+                        <div class="contents__item--banner"></div>
+                        <div class="contents__item--login-wrap">
+                            <button>
+                                NEXON ID 로그인
+                            </button>
+                            <div>
+                                <button>일회용 로그인</button>
+                                <button>QR 로그인</button>
+                            </div>
+                            <div>
+                                <div>
+                                    다른 계정 간편 로그인
+                                </div>
+                                <div>
+                                    <a>
+                                        구글
+                                    </a>
+                                    <a>
+                                        페이스북
+                                    </a>
+                                    <a>
+                                        네이버
+                                    </a>
+                                    <a>
+                                        애플
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <button>
+                                        넥슨 ID찾기
+                                    </button>
+                                    <button>
+                                        비밀번호 찾기
+                                    </button>
+                                </div>
+                                <div>
+                                    <button>
+                                        회원가입
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- contents__item -->
+            </div>
+        </div> <!-- 추천, AUTH -->
+        
+        <!-- 전체 게임 -->
+        <div>
+            <div><!-- 타이틀 -->
+                <div> <!-- 왼쪽 -->
+                    <h2>전체 게임</h2>
+                    <div>모바일 게임 커뮤니티 모아보기</div>
+                </div>
+                <div> <!-- 오른쪽 -->
+                    <div>
+                        <input type="text" placeholder="게임명 검색" />
+                        <button>검색</button>
+                    </div>
                 </div>
             </div>
+            <div> <!-- 컨텐츠 -->
+                <div> <!-- 태그 -->
+                    
+                </div>
+                <div> <!-- 게임 목록 -->
+
+                </div>
+            </div>  
         </div>
+        <!-- 전체 게임 -->
     </div>
-    <footer class="footer"></footer>
+    <footer class="footer">
+        <div> <!-- 상단 -->
+            <button>
+                [공지] 7/27(목) 컬쳐랜드 결제서비스 점검 안내
+            </button>
+            <div> <!-- SNS -->
+                <a>
+                    유튜브
+                </a>
+                <a>
+                    트위터
+                </a>
+                <a>
+                    페이스북
+                </a>
+            </div>
+        </div>
+        <div> <!-- 중단 -->
+            <ul><!-- left -->
+                <li>
+                    <a>이용약관</a>
+                </li>
+                <li>
+                    <a>개인정보처리방침</a>
+                </li>
+                <li>
+                    <a>청소년보호정책</a>
+                </li>
+                <li>
+                    <a>게임IP사용가이드</a>
+                </li>
+                <li>
+                    <a>게임시간선택제</a>
+                </li>
+                <li>
+                    <a>고객센터</a>
+                </li>
+                <li>
+                    <a>전체서비스</a>
+                </li>
+                <li>
+                    <a>회사소개</a>
+                </li>
+                <li>
+                    <a>채용안내</a>
+                </li>
+                <li>
+                    <a>윤리경영</a>
+                </li>
+                <li>
+                    <a>LEVEL UP(넥슨폰트)</a>
+                </li>
+                <li>
+                    <a>광고문의</a>
+                </li>
+                <li>
+                    <a>넥슨PC방</a>
+                </li>
+            </ul>
+            <div><!-- right -->
+                <ul><!-- 드랍다운 메뉴 -->
+                    <li>
+                        <button>
+                            Global-English
+                        </button>
+                        <button>
+                            Thai
+                        </button>
+                        <button>
+                            Traditional Chinese
+                        </button>
+                        <button>
+                            Korean
+                        </button>
+                        <button>
+                            Japanese
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div> <!-- 하단 -->
+            <div>
+                <p>
+                    (주) 넥슨코리아 대표이사 이정헌 경기도 성남시 분당구 판교로 256번길 7 전화 : 1588-7701 팩스 : 0502-258-8322
+                </p>
+                <p>
+                    E-mail : contact-us@nexon.co.kr 사업자등록번호 : 220-87-17483호 통신판매업 신고번호 : 제2013-경기성남-1659호 <a>사업자정보확인</a>
+                </p>
+                <p>
+                    © NEXON Korea Corporation All Rights Reserved.
+                </p>
+            </div>
+            <div>
+                <p>
+                    로고 이미지
+                </p>
+            </div>
+        </div>
+    </footer>
+    <button class="top-button" hidden>
+        <!-- top icon --> TOP
+    </button>
     <script src="./js/cdnjs.cloudflare.com_ajax_libs_Swiper_10.1.0_swiper-bundle.min.js"></script>
     <script src="./js/data.js"></script>
     <script src="./js/main.js"></script>

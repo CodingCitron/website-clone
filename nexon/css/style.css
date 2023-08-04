@@ -150,6 +150,20 @@ body {
     height: 560px;
 }
 
+.banner__div .swiper-wrapper {
+    min-height: 340px;
+    max-height: 560px;
+    overflow: hidden;
+}
+
+.banner__div .swiper-slide {
+    /* height: 100%; */
+}
+
+.banner__div .swiper-slide a {
+    height: 560px;
+}
+
 .hambuger {
     position: relative;
     width: 18px;
@@ -352,6 +366,148 @@ body {
     font-weight: 600;
 }
 
+.side-nav__footer ul li > a {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: all .2s linear;
+}
+
+.side-nav__footer ul li > a > span {
+    position: relative;
+    display: block;
+    width: 18px;
+    height: 16px;
+    background: transparent url('../imgs/set_service.png');
+    transition: all .2s linear;
+}
+
+.side-nav__footer ul li > a > span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: opacity .15s linear;
+    opacity: 0;
+}
+
+.side-nav__footer ul li > a:hover {
+    color: #07f;
+}
+
+.side-nav__footer ul li > a:hover span::after {
+    opacity: 1;
+} 
+
+.side-nav__footer ul li > a > span.icon-1 {
+    background-position: 0 0;
+}
+
+.side-nav__footer ul li > a > span.icon-1::after {
+    background: transparent url('../imgs/set_service.png');
+    background-position: 50px 0;
+}
+
+.side-nav__footer ul li > a > span.icon-2 {
+    background-position: 0 -50px;
+}
+
+.side-nav__footer ul li > a > span.icon-2::after {
+    background: transparent url('../imgs/set_service.png');
+    background-position: 50px -50px;
+}
+
+.side-nav__footer ul li > a > span.icon-3 {
+    background-position: 0 -100px;
+}
+
+.side-nav__footer ul li > a > span.icon-3::after {
+    background: transparent url('../imgs/set_service.png');
+    background-position: 50px -100px;
+}
+
+.side-nav__footer ul li > a > span.icon-4 {
+    background-position: 0 -150px;
+}
+
+.side-nav__footer ul li > a > span.icon-4::after {
+    background: transparent url('../imgs/set_service.png');
+    background-position: 50px -150px;
+}
+
+.side-nav__footer ul li > a > span.icon-5 {
+    background-position: 0 -200px;
+}
+
+.side-nav__footer ul li > a > span.icon-5::after {
+    background: transparent url('../imgs/set_service.png');
+    background-position: 50px -200px;
+}
+
+.side-nav__footer ul li > a > span.icon-6 {
+    background-position: 0 -250px;
+}
+
+.side-nav__footer ul li > a > span.icon-6::after {
+    background: transparent url('../imgs/set_service.png');
+    background-position: 50px -250px;
+}
+
+.side-nav__footer ul li > a > span.icon-7 {
+    background-position: 0 -300px;
+}
+
+.side-nav__footer ul li > a > span.icon-7::after {
+    background: transparent url('../imgs/set_service.png');
+    background-position: 50px -300px;
+}
+
+.side-nav__footer ul li > a > span.icon-8 {
+    background-position: 0 -350px;
+}
+
+.side-nav__footer ul li > a > span.icon-8::after {
+    background: transparent url('../imgs/set_service.png');
+    background-position: 50px -350px;
+}
+
+.side-nav__footer ul li > a > span.icon-9 {
+    background-position: 0 -400px;
+}
+
+.side-nav__footer ul li > a > span.icon-9::after {
+    background: transparent url('../imgs/set_service.png');
+    background-position: 50px -400px;
+}
+
+.side-nav .side-nav__content::-webkit-scrollbar {
+    width: 18px;
+}
+
+.side-nav .side-nav__content::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border: 6px solid white;
+    border-radius: 12px;
+    opacity: 0;
+    transition: all 0.25s linear;
+}
+
+.side-nav .side-nav__content:hover::-webkit-scrollbar-thumb {
+    background-color: #dde1e5;
+}
+
+.allService {
+    transition: all .15s linear;
+}
+
+.allService:hover {
+    color: white;
+    background-color: #07f;
+}
+
 .contents {
     max-width: 1280px;
     margin: 76px auto 0;
@@ -368,11 +524,50 @@ body {
     justify-content: space-between;
 }
 
-.contents__item {
-    width: 50%;
+.contents__inner .contents__item:nth-child(1) {
+    min-width: 644px;
 }
 
-.contents__item h3 {
+.contents__inner .contents__item:nth-child(2) {
+    width: 100%;
+}
+
+.contents__item--auth {
+    display: flex;
+    margin-top: 10px;
+}
+
+.contents__item--banner {
+    background: url('../imgs/banner_recommend_plcc3.png');
+    width: 153px;
+    margin-right: 8px;
+}
+
+.contents__item .contents__item--sub-title {
+    padding-right: 8px;
+}
+
+.contents__item .contents__item--sub-title h3 {
+
+}
+
+.contents__item .contents__item--sub-title-right {
+    display: flex;
+    justify-content: end;
+    height: 48px;
+    padding-top: 18px;
+}
+
+.contents__item .contents__item--sub-title-right > div button {
+    margin-left: 30px;
+    letter-spacing: -0.4px;
+    font-size: 14px;
+    font-family: 'NEXON Gothic';
+}
+
+.contents__item--sub-title {
+    display: flex;
+    justify-content: space-between;
     height: 48px;
     padding-top: 18px;
 }
@@ -383,16 +578,46 @@ body {
     background-color: #222426;
 }
 
-.banner__div .swiper-wrapper {
-    min-height: 340px;
-    max-height: 560px;
-    overflow: hidden;
+.contents__item .swiper {
+    margin-top: 10px;
 }
 
-.banner__div .swiper-slide {
-    /* height: 100%; */
+.contents__item .swiper .swiper-slide {
+    min-width: 161px;
+    width: 100%;
 }
 
-.banner__div .swiper-slide a {
-    height: 560px;
+.contents__item .swiper .swiper-slide > a {
+    display: flex;
+    flex-direction: column;
+    width: 153px;
+    height: 342px;
+    background-color: white;
+}
+
+.slide-content {
+    transition: all .15s linear,bottom 0s;
+}
+
+.game-img {
+    display: block;
+    width: 100%;
+    background-color: #000;
+    transition: all .15s cubic-bezier(.23,1,.32,1)
+}
+
+.slide-content:hover {
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.15);
+}
+
+.slide-content:hover .game-img {
+    transform: scale(1.075);
+}
+
+.contents__item--login-wrap {
+    flex: 1;
+    height: 342px;
+    padding: 70px 0 0 56px;
+    margin-left: 10px;
+    background-color: white;
 }
