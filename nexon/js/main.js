@@ -23,7 +23,6 @@ SlideKeys.forEach(key => {
 
 const bannnerSwiper = new Swiper(bannerSlide, {
     // Optional parameters
-    loop: true,
     effect: "fade",
     allowTouchMove: false,
     autoHeight: true,
@@ -38,16 +37,61 @@ const bannnerSwiper = new Swiper(bannerSlide, {
     },
     // If we need pagination
     pagination: {
-      el: '.swiper-pagination',
+      el: '.banner__div .swiper-pagination',
+      type: 'bullets',
       clickable: true,
+      renderBullet: function (index, className) {
+        // console.log(index, className)
+        // console.log(slideImages[SlideKeys[index]])
+        return `
+          <div class='${className}'>
+            <div class="progressbar">
+            </div>
+            <p>
+              ${SlideKeys[index]}
+            </p>
+            <h4>
+              ${slideImages[SlideKeys[index]].content}
+            </h4>
+          </div>
+        `
+      },
     },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+    on: {
+      autoplayTimeLeft(s, time, progress) {
+        const active = document.querySelector('.swiper-pagination-bullet-active')
+        const activeProgress = active.querySelector('.progressbar')
+
+        // activeProgress.style.setProperty("--progress", 1 - progress);
+        // pr,ogressContent.textContent = `${Math.ceil(time / 1000)}s`;
+
+        let value = 100 - ((1 - progress) * 100)
+        activeProgress.style.transform = `translateX(-${value}%)`
+      },
+      slideChange(e) {
+        const bullet = document.querySelectorAll('.banner__div .swiper-pagination-bullet')[e.activeIndex]
+
+        const wrap = document.querySelector('.banner__div .swiper-pagination')
+        const progressbars = wrap.querySelectorAll('.progressbar')
+
+        progressbars.forEach(el => el.style.transform = `translateX(-100%)`)
+
+        if(e.activeIndex > 4) {
+          wrap.style.transform = `translate(-${bullet.clientWidth * (e.activeIndex - 4)}px)`
+        }
+
+        if(e.activeIndex < 5) {
+          wrap.style.transform = `translate(-${bullet.clientWidth * 0}px)`
+        }
+      } 
     },
     
+    // Navigation arrows
+    navigation: {
+      nextEl: '.banner__div .swiper-button-next',
+      prevEl: '.banner__div .swiper-button-prev',
+    },
+    freeMode: true,
     resizeObserver: true
     // And if we need scrollbar
     // scrollbar: {
@@ -185,11 +229,6 @@ const recommendGamesSlide = new Swiper(recommendSwiper, {
   lazy: true,
   fadeEffect: {
     crossFade: true
-  },
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
   },
 
   // Navigation arrows
