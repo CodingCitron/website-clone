@@ -302,112 +302,166 @@
         </div> <!-- 추천, AUTH -->
         
         <!-- 전체 게임 -->
-        <div>
-            <div><!-- 타이틀 -->
-                <div> <!-- 왼쪽 -->
-                    <h2>전체 게임</h2>
-                    <div>모바일 게임 커뮤니티 모아보기</div>
-                </div>
-                <div> <!-- 오른쪽 -->
-                    <div>
-                        <input type="text" placeholder="게임명 검색" />
-                        <button>검색</button>
+        <div class="allgame">
+            <div class="allgame-header"><!-- 타이틀 -->
+                <div class="allgame-left"> <!-- 왼쪽 -->
+                    <h2>전체게임</h2>
+                    <div class="view-type-form">
+                        <button class="thumbnail"></button>
+                        <button class="list"></button>
                     </div>
+                    <div class="go-community">
+                        <span class="icon-community"></span>
+                        <span>모바일 게임 커뮤니티 모아보기</span>
+                        <span class="icon-link"></span>
+                    </div>
+                </div>
+                <div class="search"> <!-- 오른쪽 -->
+                    <fieldset>
+                        <input 
+                            class="search-form"
+                            type="text" 
+                            placeholder="게임명 검색" 
+                        />
+                        <button class="search-btn">
+                            <span></span>
+                        </button>
+                    </fieldset>
                 </div>
             </div>
             <div> <!-- 컨텐츠 -->
-                <div> <!-- 태그 -->
-                    
+                <div class="tag-box"> <!-- 태그 -->
+                    <button>#전체</button>
+                    <button>#얼리스테이지</button>
+                    <button>#Windows</button>
+                    <button>#macOS</button>
+                    <button>#Steam</button>
+                    <button>#Android</button>
+                    <button>#iOS</button>
+                    <button>#PlayStation</button>
+                    <button>#XBOX</button>
+                    <button>#SWITCH</button>
+                    <button>#RPG</button>
+                    <button>#액션 RPG</button>
+                    <button>#AOS/MOBA</button>
+                    <button>#FPS</button>
+                    <button>#캐주얼</button>
+                    <button>#스포츠</button>
+                    <button>#PVP</button>
+                    <button>#전략</button>
+                    <button>#이벤트</button>
                 </div>
-                <div> <!-- 게임 목록 -->
+                <ul class="show-games"> <!-- 게임 목록 -->
 
-                </div>
+                </ul>
             </div>  
         </div>
         <!-- 전체 게임 -->
     </div>
     <footer class="footer">
-        <div> <!-- 상단 -->
-            <button>
+        <button class="top-button">
+            <span class="icon-top-arrow"></span>
+        </button>
+        <div class="footer-top"> <!-- 상단 -->
+            <a>
                 [공지] 7/27(목) 컬쳐랜드 결제서비스 점검 안내
-            </button>
-            <div> <!-- SNS -->
-                <a>
-                    유튜브
-                </a>
-                <a>
-                    트위터
-                </a>
-                <a>
-                    페이스북
-                </a>
-            </div>
-        </div>
-        <div> <!-- 중단 -->
-            <ul><!-- left -->
+            </a>
+            <ul class="sns"> <!-- SNS -->
                 <li>
-                    <a>이용약관</a>
+                    <a class="youtube"></a>
                 </li>
                 <li>
-                    <a>개인정보처리방침</a>
+                    <a class="twitter"></a>
                 </li>
-                <li>
-                    <a>청소년보호정책</a>
-                </li>
-                <li>
-                    <a>게임IP사용가이드</a>
-                </li>
-                <li>
-                    <a>게임시간선택제</a>
-                </li>
-                <li>
-                    <a>고객센터</a>
-                </li>
-                <li>
-                    <a>전체서비스</a>
-                </li>
-                <li>
-                    <a>회사소개</a>
-                </li>
-                <li>
-                    <a>채용안내</a>
-                </li>
-                <li>
-                    <a>윤리경영</a>
-                </li>
-                <li>
-                    <a>LEVEL UP(넥슨폰트)</a>
-                </li>
-                <li>
-                    <a>광고문의</a>
-                </li>
-                <li>
-                    <a>넥슨PC방</a>
+
+                    <li>
+                    <a class="facebook"></a>
                 </li>
             </ul>
-            <div><!-- right -->
-                <ul><!-- 드랍다운 메뉴 -->
+        </div>
+        <div class="footer-mid"> <!-- 중단 -->
+            <div class="footer-mid-left">
+                <ul><!-- left -->
                     <li>
-                        <button>
-                            Global-English
-                        </button>
-                        <button>
-                            Thai
-                        </button>
-                        <button>
-                            Traditional Chinese
-                        </button>
-                        <button>
-                            Korean
-                        </button>
-                        <button>
-                            Japanese
-                        </button>
+                        <a>이용약관</a>
+                    </li>
+                    <li>
+                        <a>개인정보처리방침</a>
+                    </li>
+                    <li>
+                        <a>청소년보호정책</a>
+                    </li>
+                    <li>
+                        <a>게임IP사용가이드</a>
+                    </li>
+                    <li>
+                        <a>게임시간선택제</a>
+                    </li>
+                    <li>
+                        <a>고객센터</a>
+                    </li>
+                    <li>
+                        <a>전체서비스</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a>회사소개</a>
+                    </li>
+                    <li>
+                        <a>채용안내</a>
+                    </li>
+                    <li>
+                        <a>윤리경영</a>
+                    </li>
+                    <li>
+                        <a>LEVEL UP(넥슨폰트)</a>
+                    </li>
+                    <li>
+                        <a>광고문의</a>
+                    </li>
+                    <li>
+                        <a>넥슨PC방</a>
                     </li>
                 </ul>
             </div>
+            <div class="footer-mid-right"><!-- right -->
+                <div class="selected">
+                    <a>
+                        <span>Korean</span>
+                        <span class="icon-earth"></span>
+                    </a> 
+                    <ul><!-- 드랍다운 메뉴 -->
+                        <li>
+                            <a>
+                                Global-English
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                Thai
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                Traditional Chinese
+                            </a>
+                        </li>
+                        <li>    
+                            <a>
+                                Korean
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                Japanese
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div> <!-- 하단 -->
+        <div class="footer-bottom"> <!-- 하단 -->
             <div>
                 <p>
                     (주) 넥슨코리아 대표이사 이정헌 경기도 성남시 분당구 판교로 256번길 7 전화 : 1588-7701 팩스 : 0502-258-8322
@@ -419,16 +473,11 @@
                     © NEXON Korea Corporation All Rights Reserved.
                 </p>
             </div>
-            <div>
-                <p>
-                    로고 이미지
-                </p>
-            </div>
+            <p class="logo">
+                <a></a>
+            </p>
         </div>
     </footer>
-    <button class="top-button" hidden>
-        <!-- top icon --> TOP
-    </button>
     <script src="./js/cdnjs.cloudflare.com_ajax_libs_Swiper_10.1.0_swiper-bundle.min.js"></script>
     <script src="./js/data.js"></script>
     <script src="./js/main.js"></script>

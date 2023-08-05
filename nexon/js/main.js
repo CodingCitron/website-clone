@@ -248,6 +248,82 @@ const recommendGamesSlide = new Swiper(recommendSwiper, {
   resizeObserver: true
 })
 
-window.onresize = function (e) {
-  
-}
+console.log(allGames)
+
+const showGameEl = document.querySelector('.show-games')
+
+allGames.forEach(game => {
+  const wrap = document.createElement('li')
+
+  const title = document.createElement('h4')
+  title.textContent = game.name
+
+  const info = document.createElement('div')
+  const div = document.createElement('div')
+  const event = document.createElement('span')
+  const category = document.createElement('span')
+
+  info.className = 'info'
+  event.className = `event ${game.event || 'hidden'}`
+  event.textContent = 'EVENT'
+
+  category.className = 'category'
+  category.textContent = `${game.category}`
+
+  div.append(event)
+  div.append(category)
+
+  const deviceWrap = document.createElement('div')
+  deviceWrap.className = 'device-wrap'
+
+  for(let i = 0; i < game.device.length; i++) {
+    const device = document.createElement('div')
+
+    device.className = `${game.device[i]}`
+    device.title = `${game.device[i]}` 
+    deviceWrap.append(device)
+  }
+
+  const imgWrap = document.createElement('div')
+  const img = document.createElement('img')
+  img.src = game.imgURL
+
+  imgWrap.append(img)
+  imgWrap.className = 'img-wrap'
+
+  info.append(title)
+  info.append(div)
+
+  wrap.append(imgWrap)
+  // wrap.append(title)
+  // wrap.append(div)
+  wrap.append(info)
+  wrap.append(deviceWrap)
+
+  showGameEl.append(wrap)
+})
+
+const siteSelected = document.querySelector('.footer-mid-right > .selected')
+
+siteSelected.addEventListener('click', e => {
+  siteSelected.classList.toggle('open')
+})
+
+const topButton = document.querySelector('.top-button')
+topButton.addEventListener('click', e => {  
+  document.body.scrollTop = 0
+  document.documentElement.scrollTop = 0
+})
+
+const footer = document.querySelector('.footer')
+
+// 20
+window.addEventListener('scroll', e => {
+  const { top } = footer.getBoundingClientRect()
+
+  if(top + 20 <= window.innerHeight) {
+    topButton.classList.add('active')
+  } else {
+    topButton.classList.remove('active')
+  }
+})
