@@ -33,6 +33,10 @@ a, button {
     justify-content: center;
 }
 
+.mt-8 {
+    margin-top: 8px;
+}
+
 body {
     position: relative;
     font-family: 'MALGUN GOTHIC', 'sans serif';
@@ -570,7 +574,10 @@ body {
 }
 
 .contents__item .contents__item--sub-title h3 {
-
+    font-family: 'NEXON Gothic';
+    font-size: 16px;
+    font-weight: 700;
+    color: #00cec6;
 }
 
 .contents__item .contents__item--sub-title-right {
@@ -646,8 +653,11 @@ body {
 
 .pagination-wrap {
     position: absolute;
+    left: 50%;
     bottom: 0;
-    width: 100%;
+    width: 1400px;
+    transform: translateX(-50%);
+    z-index: 10;
 }
 
 .pagination-inner {
@@ -751,4 +761,206 @@ body {
     height: 100%;
     transform: translateX(-100%);
     background-color: #07f;
+}
+
+.banner__div .swiper-button-prev {
+    top: 45px;
+    width: 30px;
+    height: 30px;
+    background-image: url('../imgs/set_promotion.png');
+    transition: all 0.15s;
+}
+
+.banner__div .swiper-button-next {
+    top: 45px;
+    width: 30px;
+    height: 30px;
+    background-image: url('../imgs/set_promotion.png');
+    background-position: 50px 0;
+    opacity: 0.3;
+    transition: all 0.15s;
+}
+
+.banner__div .swiper-button-prev,
+.banner__div .swiper-button-next {
+    opacity: 0;
+}
+
+.banner__div:hover .swiper-button-prev,
+.banner__div:hover .swiper-button-next {
+    opacity: 0.3;
+}
+
+.banner__div .swiper-button-next.swiper-button-disabled,
+.banner__div .swiper-button-prev.swiper-button-disabled {
+    opacity: 0;
+    pointer-events: none;
+} 
+
+.banner__div .swiper-button-next::after,
+.banner__div .swiper-button-prev::after {
+    display: none;
+}
+
+.banner__div .swiper-button-prev:hover,
+.banner__div .swiper-button-next:hover {
+    opacity: 1;
+}
+
+.contents__item .contents__item--sub-title > div {
+    display: flex;
+}
+
+#recommend-left {
+    width: 28px;
+    height: 28px;
+    margin-right: -1px;
+    background: url('../imgs/set_recommend.svg') no-repeat -49px 1px;
+    border: 1px solid #9fa1a7;
+}
+
+#recommend-right {
+    width: 28px;
+    height: 28px;
+    background: url('../imgs/set_recommend.svg') no-repeat -49px -49px;
+    border: 1px solid #9fa1a7;
+}
+
+.recommend-item {
+    width: 32px;
+    height: 16px;
+    margin: 16px 0 0 12px;
+    text-align: center;
+    font: 10px Malgun Gothic;
+    font-weight: 700;
+    line-height: 16px;
+    border-radius: 20px;
+    color: white;
+    background-color: #00dbd3;
+}
+
+.recommend-item.pick {
+    background-color: #f78029;
+}
+
+.recommend-item-title {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    width: 129px;
+    height: 36px;
+    margin: 8px 0 4px 12px;
+    font-family: 'NEXON Gothic';
+    font-weight: bold;
+    font-size: 14px/18px;
+    color: #17191d;
+}
+
+.login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 353px;
+    height: 60px;
+    background-color: #17191D;
+    color: white;
+    font-family: 'NEXON Gothic';
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.button-form {
+    display: flex;
+    gap: 1px;
+}
+
+.QR-login,
+.disposable-login {
+    width: 176px;
+    height: 52px;
+    background-color: #4a4e57;
+    color: white;
+    font-family: 'NEXON Gothic';
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.other-login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    width: 353px;
+    height: 42px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.other-text {
+    font-size: 12px;
+    color: #9fa1a7;
+    letter-spacing: -.3px;
+}
+
+.other-login-link {}
+
+.other-login-link > a {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-right: 6px;
+    background: url('../imgs/set_login.png') no-repeat 0 0;
+    background-size: 100px auto;
+    transition: all .15s linear;
+}
+
+.other-login-link > a:nth-child(1) {
+    background-position: 0 -50px;
+}
+
+.other-login-link > a:nth-child(2) {
+    background-position: 0 -100px;
+}
+
+.other-login-link > a:nth-child(3) {
+    background-position: 0 -150px;
+}
+
+.other-login-link > a:nth-child(4) {
+    background-position: 0 -200px;
+}
+
+.other-login-link > a:hover {
+    opacity: 0.5;
+}
+
+.etc-form {
+    width: 353px;
+    padding-top: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.etc-form button {
+    color: #737881;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.etc-form div:nth-child(1) button {
+    margin-right: 16px;
+}
+
+.contents .recommend {
+    height: 496px;
+}
+
+.swiper-button-disabled {
+    pointer-events: none;
+    opacity: 0.5;
 }

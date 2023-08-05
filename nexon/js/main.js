@@ -33,7 +33,8 @@ const bannnerSwiper = new Swiper(bannerSlide, {
       crossFade: true
     },
     autoplay: {
-      delay: 5e3
+      delay: 5e3,
+      disableOnInteraction: false,
     },
     // If we need pagination
     pagination: {
@@ -58,7 +59,15 @@ const bannnerSwiper = new Swiper(bannerSlide, {
       },
     },
     on: {
+      resize(e) {
+        console.log(e)
+
+        // 1920 ~ 1200
+
+
+      },
       autoplayTimeLeft(s, time, progress) {
+        // console.log(progress)
         const active = document.querySelector('.swiper-pagination-bullet-active')
         const activeProgress = active.querySelector('.progressbar')
 
@@ -196,7 +205,6 @@ contentsSlideImages.forEach(info => {
   
   bottomDiv.append(pick)
   bottomDiv.append(title)
-  console.log(info)
 
   pick.className = 'recommend-item'
   pick.textContent = '추천'
@@ -233,8 +241,8 @@ const recommendGamesSlide = new Swiper(recommendSwiper, {
 
   // Navigation arrows
   navigation: {
-    nextEl: recommendLeftBtn,
-    prevEl: recommendRightBtn
+    nextEl: recommendRightBtn,
+    prevEl: recommendLeftBtn
   },
   
   resizeObserver: true
