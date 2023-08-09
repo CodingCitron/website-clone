@@ -2,6 +2,7 @@
     fill: white;
 }
 
+.arrow-up,
 .arrow-down {
     width: 8px;
     height: 5px;
@@ -23,4 +24,8 @@
 .search {
     width: 22px;
     height: 22px;
+}
+
+.close-svg {
+
 }
