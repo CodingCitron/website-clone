@@ -50,13 +50,8 @@ function drawBannerCanvas () {
     bannerCanvasCtx.lineWidth = 2
     bannerCanvasCtx.moveTo(bannerCanvas.width, 32)
     bannerCanvasCtx.lineTo(bannerCanvas.width, bannerCanvas.height)
-
-    bannerCanvasCtx.moveTo(bannerCanvas.width, bannerCanvas.height)
     bannerCanvasCtx.lineTo(0, bannerCanvas.height)
-
-    bannerCanvasCtx.moveTo(0, bannerCanvas.height)
     bannerCanvasCtx.lineTo(0, 0)
-
     bannerCanvasCtx.stroke()
 }
 
@@ -67,3 +62,22 @@ const observe = new ResizeObserver((e) => {
 observe.observe(videoWrap)
 
 drawBannerCanvas ()
+
+function darwButtonLine () {
+    const imageWrap = document.querySelector('.image-wrap')
+    const button = document.querySelector('.image-wrap button')
+    const canvas = imageWrap.querySelector('.image-wrap canvas')
+    const ctx = canvas.getContext('2d')
+    
+    canvas.width = button.clientWidth + 10
+    canvas.height = button.clientHeight + 10
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+    ctx.beginPath()
+    ctx.strokeStyle = '#B2AEAB'
+    ctx.lineWidth = 2
+    ctx.strokeRect(0, 0, canvas.width, canvas.height)
+    ctx.stroke()
+}
+
+darwButtonLine ()

@@ -399,7 +399,7 @@ svg {
     object-fit: cover;
 }
 
-.banner-main canvas {
+.banner-main .video-wrap > canvas {
     position: absolute;
     left: 8px;
     top: -12px
@@ -407,4 +407,52 @@ svg {
 
 .banner-main .video-wrap {
     position: relative;
+}
+
+.banner-main .image-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.banner-main .image-wrap-inner {
+    width: 40vw;
+    height: calc(17.6333vw);
+    max-width: 37.5rem;
+    max-height: 16.5312rem;
+}
+
+.banner-main .image-wrap img {
+    width: 100%;
+}
+
+.banner-main .image-wrap .button-wrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0.625rem;
+}
+
+.banner-main .image-wrap .button-wrap button {
+    position: relative;
+    background-color: rgb(11, 198, 227);
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    min-width: 195px;
+    height: 56px;
+    transition: background-color 200ms ease 0s, opacity 0.01s ease 400ms;
+    cursor: pointer;
+    font-family: 'Noto Sans KR';
+}
+
+.banner-main .image-wrap .button-wrap canvas {
+    position: absolute;
+    left: -5px;
+    top: -5px;
 }
