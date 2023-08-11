@@ -8,6 +8,8 @@
 
 a {
     display: block;
+    text-decoration: none;
+    color: inherit;
     cursor: pointer;
 }
 
@@ -42,6 +44,7 @@ svg {
     color: #f9f9f9;
     font-size: 13px;
     font-family: 'malgun gothic', sans-serif;
+    z-index: 100;
 }
 
 .header-space {
@@ -455,4 +458,138 @@ svg {
     position: absolute;
     left: -5px;
     top: -5px;
+}
+
+.news-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-wrap > div {
+    display: flex;
+}
+
+.news-wrap .left > div {
+    z-index: 10;
+    position: relative;
+    display: inline-block;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.news-wrap .left > div span {
+    display: block;
+    padding-top: 100%;
+    transform: rotate(-90deg) translate(-100%, -50%);
+    transform-origin: left top;
+    white-space: nowrap;
+    color: rgb(28, 29, 42);
+    font-size: 0.625rem;
+    letter-spacing: 0.25em;
+    font-weight: bold;
+}
+
+.news-wrap .left > div span::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.4em;
+    height: 1px;
+    margin-left: 0.5em;
+    background-color: currentcolor;
+}
+
+.news-wrap .middle {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    height: 200px;
+}
+
+.news-wrap .left,
+.news-wrap .right {
+    width: 60px;
+}
+
+.news-wrap .middle > article {
+    position: relative;
+    display: flex;
+    width: 30%;
+    height: 100%;
+}
+
+.news-wrap .middle > article > div {
+    display: flex;
+    height: 100%;
+    font-size: 12px;
+}
+
+.news-wrap .middle > article > div:nth-child(1) {
+    align-items: center;
+    max-width: 145px;
+    min-width: 145px;
+    width: 100%;
+}
+
+.news-wrap .middle > article > div:nth-child(2) {
+    flex-direction: column;
+    max-width: 85%;
+    padding: 10px;
+} 
+
+.news-wrap .middle > article img {
+    object-fit: cover;
+    width: 100%;
+    height: 90%;
+}
+
+.news-wrap .middle > article .canvas-wrap {
+    position: absolute;
+    left: 10px;
+    right: 2px;
+}
+
+.news-wrap .middle > article > div p {
+    margin-top: 8px;
+}
+
+.news-wrap .middle > article > div h4 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: medium;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: normal;
+}
+
+.news-wrap .middle > article > div small {
+    color: rgb(188, 188, 188);
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.all-view-button {
+    display: flex;
+    justify-content: end;
+    padding: 0 60px;
+}
+
+.all-view-button > a > span {
+    display: block;
+}
+
+.all-view-button > a {
+    display: flex;
+    margin-top: 1.5625rem;
+    font-size: 12px;
+    font-weight: medium;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.all-view-button svg {
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    margin-left: 6px;
+    fill: rgb(11, 198, 227);
+    transition: transform 200ms ease 0s;
 }

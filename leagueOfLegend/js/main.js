@@ -81,3 +81,27 @@ function darwButtonLine () {
 }
 
 darwButtonLine ()
+
+function drawNewsLine(el) {
+    const canvas = el.querySelector('canvas')
+    const ctx = canvas.getContext('2d')
+
+    canvas.width = el.clientWidth - 10
+    canvas.height = el.clientHeight 
+    
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+    ctx.beginPath()
+    ctx.strokeStyle = '#B2AEAB'
+    ctx.lineWidth = 2
+
+    ctx.strokeRect(0, 0, canvas.width, canvas.height)
+    ctx.stroke()
+}
+
+const newsWrapArticles = document.querySelectorAll('.news-wrap .middle article');
+
+[...newsWrapArticles].forEach(el => {
+    console.log(el)
+    drawNewsLine(el)
+})
