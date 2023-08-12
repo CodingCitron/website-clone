@@ -593,3 +593,67 @@ svg {
     fill: rgb(11, 198, 227);
     transition: transform 200ms ease 0s;
 }
+
+.champion .title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    margin: 60px;
+    text-align: center;
+    color: white;
+}
+
+
+.champion .title > h3 > div {
+    display: inline-block;
+    padding: 0px 30px;
+    margin-right: 22px;
+    border-right: 1px solid white;
+    font-size: 18px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+}
+
+.champion .title canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.champion .title .right {
+    display: flex;
+    width: 100px;
+}
+
+.champion .title a {
+    padding: 4px 8px;
+}
+
+.champion .title svg {
+    fill: white;
+}
+
+.champion .selection-champ {
+    position: relative;
+    padding: 140px 0px 15vw;
+}
+
+.champion .selection-champ header {
+    display: flex;
+}
+
+.champion .selection-champ header .left {
+    width: 60px;
+    flex: 0 0 auto;
+}
+
+.champion .selection-champ header .right {
+    flex: 1;
+}
+
+.champion .selection-champ .selection-champ-main {
+    margin-top: calc(181.54px + -21.63vw);
+}

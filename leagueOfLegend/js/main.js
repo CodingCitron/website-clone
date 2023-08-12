@@ -58,6 +58,8 @@ function drawBannerCanvas () {
 const observe = new ResizeObserver((e) => {
     // console.log(e)
     drawBannerCanvas ()
+    backgroundCanvas ()
+    newsDraw()
 })
 observe.observe(videoWrap)
 
@@ -101,7 +103,33 @@ function drawNewsLine(el) {
 
 const newsWrapArticles = document.querySelectorAll('.news-wrap .middle article');
 
-[...newsWrapArticles].forEach(el => {
-    console.log(el)
-    drawNewsLine(el)
-})
+function newsDraw() {
+    [...newsWrapArticles].forEach(el => {
+        drawNewsLine(el)
+    })
+}
+
+newsDraw()
+
+// #051C24
+function backgroundCanvas () {
+    const el = document.querySelector('.champion .title')
+    const canvas = el.querySelector('canvas')
+    const ctx = canvas.getContext('2d')
+
+    canvas.width = el.clientWidth
+    canvas.height = el.clientHeight
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+    ctx.beginPath()
+    ctx.fillStyle = '#051C24'
+    ctx.moveTo(0, 0)
+    ctx.lineTo(canvas.width - 16, 0)
+    ctx.lineTo(canvas.width, 16)
+    ctx.lineTo(canvas.width, canvas.height)
+    ctx.lineTo(0, canvas.height)
+    ctx.lineTo(0, 0)
+    ctx.fill()
+}
+
+backgroundCanvas ()

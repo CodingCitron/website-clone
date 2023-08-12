@@ -29,3 +29,9 @@
 .close-svg {
 
 }
+
+.instagram svg,
+.facebook svg {
+    width: 24px;
+    height: 24px;
+}
