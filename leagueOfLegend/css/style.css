@@ -605,7 +605,6 @@ svg {
     color: white;
 }
 
-
 .champion .title > h3 > div {
     display: inline-block;
     padding: 0px 30px;
@@ -656,4 +655,82 @@ svg {
 
 .champion .selection-champ .selection-champ-main {
     margin-top: calc(181.54px + -21.63vw);
+}
+
+.champion .selection-champ header .right .top {
+    text-align: center;
+    font-family: serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.champion .selection-champ header .right h4 {
+    text-align: center;
+    font-size: calc(37.09px + 1.82vw);
+    margin-bottom: -10px;
+    padding-bottom: 10px;
+}
+
+.champion .selection-champ header .right small {
+    display: block;
+    line-height: 1.6;
+    margin: 12px auto 0px;
+    font-size: 0.875rem;
+    text-align: center;
+    font-size: 12px;
+    font-weight: medium;
+}
+
+.champion .selection-champ header .right .button-wrap {
+    position: relative;
+    margin-top: 0.9375rem;
+    text-align: center;
+}
+
+.champion .selection-champ header .right .button-wrap > button {
+    position: relative;
+    margin: 8px;
+    min-width: 220px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.champion .selection-champ header .right .button-wrap > button canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.champion .selection-champ-main {
+    display: flex;
+}
+
+.champion .selection-champ-main .left,
+.champion .selection-champ-main .right {
+    width: 50%;
+}
+
+.champion .selection-champ-main .right {
+    padding-right: 60px;
+}
+
+.champion .selection-champ-main .right img {
+    width: 100%;
+    height: 100%;
+}
+
+.champion .selection-champ-main .button-wrap > button {
+    padding: 12px;
+    border: 0px;
+    background: transparent;
+}
+
+.class-wrap {
+    width: 70px;
+    height: 70px;
+}
+
+.class-svg {
+    fill: rgb(195, 144, 49);
 }
