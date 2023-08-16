@@ -741,8 +741,10 @@ svg {
 }
 
 .class-wrap {
+    position: relative;
     width: 70px;
     height: 70px;
+    margin: 0px auto 10px;
 }
 
 .class-svg {
@@ -764,6 +766,11 @@ svg {
 
 .champion .selection-champ-main .button-wrap .button-wrap-middle {
     display: inline-flex;
+    font-size: 10px;
+}
+
+.font-10 {
+    font-size: 10px;
 }
 
 .champion .selection-champ-main .button-wrap .button-wrap-middle > button {
@@ -784,3 +791,29 @@ svg {
     width: 100%;
 }
 
+.class-icon {
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    width: 30px;
+    height: 30px;
+    will-change: transform;
+    transform-origin: center bottom;
+    transform: translateY(15px) scale(0.75, 0.75);
+    transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0s, fill 0.2s ease-in-out 0s;
+}
+
+.class-icon svg {
+
+}
+
+.middle-bar {
+    display: block;
+    width: 1px;
+    height: 20px;
+    margin: 0px auto;
+}
+
+.bottom-bar {
+    height: 9px;
+}
